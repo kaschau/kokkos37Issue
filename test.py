@@ -16,15 +16,13 @@ def simulate():
 
     # Set the MW attribute defined in thtrdat_.hpp with a 1D
     # kokkos array. It will fail here with kokkos 3.7
-    test.MW = (
-        kokkos.array(
-            "MW",
-            shape=(10,),
-            layout=kokkos.LayoutRight,
-            dtype=kokkos.double,
-            space=kokkos.HostSpace,
-            dynamic=False,
-        ),
+    test.MW = kokkos.array(
+        "MW",
+        shape=(10,),
+        layout=kokkos.LayoutRight,
+        dtype=kokkos.double,
+        space=kokkos.HostSpace,
+        dynamic=False,
     )
 
 
